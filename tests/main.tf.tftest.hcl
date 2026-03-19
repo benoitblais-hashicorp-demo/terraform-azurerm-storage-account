@@ -1,13 +1,13 @@
 run "plan_basic" {
-	command = plan
+  command = plan
 
-	module {
-		source = "./tests/fixtures/basic"
-	}
+  module {
+    source = "./tests/fixtures/basic"
+  }
 
-	variables {
-		storage_account_name = "st${substr(replace(uuid(), "-", ""), 0, 10)}"
-		location             = "eastus"
-		resource_group_name  = "rg-${substr(replace(uuid(), "-", ""), 0, 10)}"
-	}
+  variables {
+    storage_account_name = "st${substr(replace(uuid(), "-", ""), 0, 10)}"
+    location             = "eastus"
+    resource_group_name  = "rg-${substr(replace(uuid(), "-", ""), 0, 10)}"
+  }
 }
