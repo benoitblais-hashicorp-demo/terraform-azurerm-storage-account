@@ -1,24 +1,43 @@
-# Title
+# Azure Storage Account Terraform Module
 
-Describe the purpose of the module.
+Terraform module to provision an Azure Storage Account with optional networking, encryption, data plane objects, and private endpoint integration.
 
 ## Permissions
 
-Describe the required permissions to use the module.
+To provision the Azure resources managed by this module, the identity running Terraform needs permissions such as:
 
-## Authentication
+- Storage account management (create/update/delete).
+- Storage containers, blobs, queues, and tables management.
+- Storage account network rules and private endpoint management.
+- Key Vault key access for customer-managed keys (if used).
+- Resource group read and write access where resources are created.
 
-Describe the methods for authenticating with the requried providers.
+## Authentications
+
+Authenticate to Azure using one of the supported AzureRM provider methods:
+
+- Azure CLI (`az login`) for local development.
+- Service principal with client secret or certificate.
+- Managed identity when running in Azure.
+- Environment variables (`ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_SUBSCRIPTION_ID`).
 
 ## Features
 
-Describe the feature supported by the module.
+- Create and configure an Azure Storage Account with secure defaults.
+- Optional identity, customer-managed keys, encryption scopes, and management policies.
+- Optional local users and network rules.
+- Optional data plane resources: containers, blobs, queues, and tables.
+- Optional private endpoint with DNS zone group association.
 
 ## Usage example
 
 ```hcl
-module "name" {
-  source  = "app.terraform.io/"
+module "storage_account" {
+  source  = "app.terraform.io/benoitblais-hashicorp/terraform-azurerm-storage-account/azurerm"
   version = "0.0.0"
+
+  name                = "stexample123"
+  location            = "eastus"
+  resource_group_name = "rg-example"
 }
 ```
