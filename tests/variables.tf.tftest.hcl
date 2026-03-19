@@ -154,7 +154,8 @@ run "invalid_blob_properties_delete_retention_days" {
     resource_group_name = "rg-${substr(replace(uuid(), "-", ""), 0, 10)}"
     blob_properties = {
       delete_retention_policy = {
-        days = 0
+        days                     = 0
+        permanent_delete_enabled = false
       }
     }
   }
