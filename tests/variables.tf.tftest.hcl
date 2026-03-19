@@ -118,7 +118,7 @@ run "invalid_storage_account_customer_managed_key_ids" {
     location            = "eastus"
     resource_group_name = "rg-${substr(replace(uuid(), "-", ""), 0, 10)}"
     storage_account_customer_managed_key = {
-      key_vault_id              = "bad"
+      key_vault_key_id          = "bad"
       user_assigned_identity_id = "bad"
     }
   }
