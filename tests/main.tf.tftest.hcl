@@ -2,7 +2,7 @@ run "plan_basic" {
 	command = plan
 
 	module {
-		source = "./fixtures/basic"
+		source = "./tests/fixtures/basic"
 	}
 
 	variables {
