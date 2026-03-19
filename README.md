@@ -902,69 +902,477 @@ The following resources are used by this module:
 
 The following outputs are exported:
 
+### <a name="output_private_endpoint"></a> [private\_endpoint](#output\_private\_endpoint)
+
+Description: The private endpoint resource if created.
+
+### <a name="output_private_endpoint_custom_dns_configs"></a> [private\_endpoint\_custom\_dns\_configs](#output\_private\_endpoint\_custom\_dns\_configs)
+
+Description: The private endpoint custom DNS configs if created.
+
 ### <a name="output_private_endpoint_id"></a> [private\_endpoint\_id](#output\_private\_endpoint\_id)
 
 Description: The private endpoint ID if created.
+
+### <a name="output_private_endpoint_ip_configuration"></a> [private\_endpoint\_ip\_configuration](#output\_private\_endpoint\_ip\_configuration)
+
+Description: The private endpoint IP configuration blocks if created.
+
+### <a name="output_private_endpoint_network_interface"></a> [private\_endpoint\_network\_interface](#output\_private\_endpoint\_network\_interface)
+
+Description: The private endpoint network interface block if created.
+
+### <a name="output_private_endpoint_network_interface_id"></a> [private\_endpoint\_network\_interface\_id](#output\_private\_endpoint\_network\_interface\_id)
+
+Description: The private endpoint network interface ID if created.
+
+### <a name="output_private_endpoint_network_interface_name"></a> [private\_endpoint\_network\_interface\_name](#output\_private\_endpoint\_network\_interface\_name)
+
+Description: The private endpoint network interface name if created.
+
+### <a name="output_private_endpoint_private_dns_zone_configs"></a> [private\_endpoint\_private\_dns\_zone\_configs](#output\_private\_endpoint\_private\_dns\_zone\_configs)
+
+Description: The private endpoint private DNS zone configs if created.
+
+### <a name="output_private_endpoint_private_service_connection_private_ip_address"></a> [private\_endpoint\_private\_service\_connection\_private\_ip\_address](#output\_private\_endpoint\_private\_service\_connection\_private\_ip\_address)
+
+Description: The private endpoint private service connection private IP address if created.
+
+### <a name="output_storage_account"></a> [storage\_account](#output\_storage\_account)
+
+Description: The storage account resource.
+
+### <a name="output_storage_account_customer_managed_key"></a> [storage\_account\_customer\_managed\_key](#output\_storage\_account\_customer\_managed\_key)
+
+Description: The customer managed key resource if created.
+
+### <a name="output_storage_account_customer_managed_key_federated_identity_client_id"></a> [storage\_account\_customer\_managed\_key\_federated\_identity\_client\_id](#output\_storage\_account\_customer\_managed\_key\_federated\_identity\_client\_id)
+
+Description: The customer managed key federated identity client ID if created.
 
 ### <a name="output_storage_account_customer_managed_key_id"></a> [storage\_account\_customer\_managed\_key\_id](#output\_storage\_account\_customer\_managed\_key\_id)
 
 Description: The customer managed key resource ID if created.
 
+### <a name="output_storage_account_customer_managed_key_key_vault_key_id"></a> [storage\_account\_customer\_managed\_key\_key\_vault\_key\_id](#output\_storage\_account\_customer\_managed\_key\_key\_vault\_key\_id)
+
+Description: The customer managed key Key Vault key ID if created.
+
+### <a name="output_storage_account_customer_managed_key_storage_account_id"></a> [storage\_account\_customer\_managed\_key\_storage\_account\_id](#output\_storage\_account\_customer\_managed\_key\_storage\_account\_id)
+
+Description: The customer managed key storage account ID if created.
+
+### <a name="output_storage_account_customer_managed_key_user_assigned_identity_id"></a> [storage\_account\_customer\_managed\_key\_user\_assigned\_identity\_id](#output\_storage\_account\_customer\_managed\_key\_user\_assigned\_identity\_id)
+
+Description: The customer managed key user-assigned identity ID if created.
+
 ### <a name="output_storage_account_id"></a> [storage\_account\_id](#output\_storage\_account\_id)
 
 Description: The storage account resource ID.
+
+### <a name="output_storage_account_identity"></a> [storage\_account\_identity](#output\_storage\_account\_identity)
+
+Description: The storage account identity block.
+
+### <a name="output_storage_account_identity_principal_id"></a> [storage\_account\_identity\_principal\_id](#output\_storage\_account\_identity\_principal\_id)
+
+Description: The storage account identity principal ID.
+
+### <a name="output_storage_account_identity_tenant_id"></a> [storage\_account\_identity\_tenant\_id](#output\_storage\_account\_identity\_tenant\_id)
+
+Description: The storage account identity tenant ID.
 
 ### <a name="output_storage_account_local_user_ids"></a> [storage\_account\_local\_user\_ids](#output\_storage\_account\_local\_user\_ids)
 
 Description: Map of local user IDs keyed by local user name.
 
+### <a name="output_storage_account_local_user_passwords"></a> [storage\_account\_local\_user\_passwords](#output\_storage\_account\_local\_user\_passwords)
+
+Description: Map of local user passwords keyed by local user name.
+
+### <a name="output_storage_account_local_user_sids"></a> [storage\_account\_local\_user\_sids](#output\_storage\_account\_local\_user\_sids)
+
+Description: Map of local user SIDs keyed by local user name.
+
+### <a name="output_storage_account_local_users"></a> [storage\_account\_local\_users](#output\_storage\_account\_local\_users)
+
+Description: Map of storage account local users keyed by local user name.
+
 ### <a name="output_storage_account_name"></a> [storage\_account\_name](#output\_storage\_account\_name)
 
 Description: The storage account name.
+
+### <a name="output_storage_account_network_rules"></a> [storage\_account\_network\_rules](#output\_storage\_account\_network\_rules)
+
+Description: The storage account network rules resource if created.
 
 ### <a name="output_storage_account_network_rules_id"></a> [storage\_account\_network\_rules\_id](#output\_storage\_account\_network\_rules\_id)
 
 Description: The storage account network rules resource ID if created.
 
+### <a name="output_storage_account_primary_access_key"></a> [storage\_account\_primary\_access\_key](#output\_storage\_account\_primary\_access\_key)
+
+Description: The storage account primary access key.
+
+### <a name="output_storage_account_primary_blob_connection_string"></a> [storage\_account\_primary\_blob\_connection\_string](#output\_storage\_account\_primary\_blob\_connection\_string)
+
+Description: The storage account primary blob connection string.
+
 ### <a name="output_storage_account_primary_blob_endpoint"></a> [storage\_account\_primary\_blob\_endpoint](#output\_storage\_account\_primary\_blob\_endpoint)
 
 Description: The primary blob endpoint.
+
+### <a name="output_storage_account_primary_blob_host"></a> [storage\_account\_primary\_blob\_host](#output\_storage\_account\_primary\_blob\_host)
+
+Description: The primary blob host.
+
+### <a name="output_storage_account_primary_blob_internet_endpoint"></a> [storage\_account\_primary\_blob\_internet\_endpoint](#output\_storage\_account\_primary\_blob\_internet\_endpoint)
+
+Description: The primary blob internet endpoint.
+
+### <a name="output_storage_account_primary_blob_internet_host"></a> [storage\_account\_primary\_blob\_internet\_host](#output\_storage\_account\_primary\_blob\_internet\_host)
+
+Description: The primary blob internet host.
+
+### <a name="output_storage_account_primary_blob_microsoft_endpoint"></a> [storage\_account\_primary\_blob\_microsoft\_endpoint](#output\_storage\_account\_primary\_blob\_microsoft\_endpoint)
+
+Description: The primary blob Microsoft endpoint.
+
+### <a name="output_storage_account_primary_blob_microsoft_host"></a> [storage\_account\_primary\_blob\_microsoft\_host](#output\_storage\_account\_primary\_blob\_microsoft\_host)
+
+Description: The primary blob Microsoft host.
+
+### <a name="output_storage_account_primary_connection_string"></a> [storage\_account\_primary\_connection\_string](#output\_storage\_account\_primary\_connection\_string)
+
+Description: The storage account primary connection string.
+
+### <a name="output_storage_account_primary_dfs_endpoint"></a> [storage\_account\_primary\_dfs\_endpoint](#output\_storage\_account\_primary\_dfs\_endpoint)
+
+Description: The primary DFS endpoint.
+
+### <a name="output_storage_account_primary_dfs_host"></a> [storage\_account\_primary\_dfs\_host](#output\_storage\_account\_primary\_dfs\_host)
+
+Description: The primary DFS host.
+
+### <a name="output_storage_account_primary_dfs_internet_endpoint"></a> [storage\_account\_primary\_dfs\_internet\_endpoint](#output\_storage\_account\_primary\_dfs\_internet\_endpoint)
+
+Description: The primary DFS internet endpoint.
+
+### <a name="output_storage_account_primary_dfs_internet_host"></a> [storage\_account\_primary\_dfs\_internet\_host](#output\_storage\_account\_primary\_dfs\_internet\_host)
+
+Description: The primary DFS internet host.
+
+### <a name="output_storage_account_primary_dfs_microsoft_endpoint"></a> [storage\_account\_primary\_dfs\_microsoft\_endpoint](#output\_storage\_account\_primary\_dfs\_microsoft\_endpoint)
+
+Description: The primary DFS Microsoft endpoint.
+
+### <a name="output_storage_account_primary_dfs_microsoft_host"></a> [storage\_account\_primary\_dfs\_microsoft\_host](#output\_storage\_account\_primary\_dfs\_microsoft\_host)
+
+Description: The primary DFS Microsoft host.
+
+### <a name="output_storage_account_primary_file_endpoint"></a> [storage\_account\_primary\_file\_endpoint](#output\_storage\_account\_primary\_file\_endpoint)
+
+Description: The primary file endpoint.
+
+### <a name="output_storage_account_primary_file_host"></a> [storage\_account\_primary\_file\_host](#output\_storage\_account\_primary\_file\_host)
+
+Description: The primary file host.
+
+### <a name="output_storage_account_primary_file_internet_endpoint"></a> [storage\_account\_primary\_file\_internet\_endpoint](#output\_storage\_account\_primary\_file\_internet\_endpoint)
+
+Description: The primary file internet endpoint.
+
+### <a name="output_storage_account_primary_file_internet_host"></a> [storage\_account\_primary\_file\_internet\_host](#output\_storage\_account\_primary\_file\_internet\_host)
+
+Description: The primary file internet host.
+
+### <a name="output_storage_account_primary_file_microsoft_endpoint"></a> [storage\_account\_primary\_file\_microsoft\_endpoint](#output\_storage\_account\_primary\_file\_microsoft\_endpoint)
+
+Description: The primary file Microsoft endpoint.
+
+### <a name="output_storage_account_primary_file_microsoft_host"></a> [storage\_account\_primary\_file\_microsoft\_host](#output\_storage\_account\_primary\_file\_microsoft\_host)
+
+Description: The primary file Microsoft host.
+
+### <a name="output_storage_account_primary_location"></a> [storage\_account\_primary\_location](#output\_storage\_account\_primary\_location)
+
+Description: The storage account primary location.
 
 ### <a name="output_storage_account_primary_queue_endpoint"></a> [storage\_account\_primary\_queue\_endpoint](#output\_storage\_account\_primary\_queue\_endpoint)
 
 Description: The primary queue endpoint.
 
+### <a name="output_storage_account_primary_queue_host"></a> [storage\_account\_primary\_queue\_host](#output\_storage\_account\_primary\_queue\_host)
+
+Description: The primary queue host.
+
+### <a name="output_storage_account_primary_queue_microsoft_endpoint"></a> [storage\_account\_primary\_queue\_microsoft\_endpoint](#output\_storage\_account\_primary\_queue\_microsoft\_endpoint)
+
+Description: The primary queue Microsoft endpoint.
+
+### <a name="output_storage_account_primary_queue_microsoft_host"></a> [storage\_account\_primary\_queue\_microsoft\_host](#output\_storage\_account\_primary\_queue\_microsoft\_host)
+
+Description: The primary queue Microsoft host.
+
 ### <a name="output_storage_account_primary_table_endpoint"></a> [storage\_account\_primary\_table\_endpoint](#output\_storage\_account\_primary\_table\_endpoint)
 
 Description: The primary table endpoint.
+
+### <a name="output_storage_account_primary_table_host"></a> [storage\_account\_primary\_table\_host](#output\_storage\_account\_primary\_table\_host)
+
+Description: The primary table host.
+
+### <a name="output_storage_account_primary_table_microsoft_endpoint"></a> [storage\_account\_primary\_table\_microsoft\_endpoint](#output\_storage\_account\_primary\_table\_microsoft\_endpoint)
+
+Description: The primary table Microsoft endpoint.
+
+### <a name="output_storage_account_primary_table_microsoft_host"></a> [storage\_account\_primary\_table\_microsoft\_host](#output\_storage\_account\_primary\_table\_microsoft\_host)
+
+Description: The primary table Microsoft host.
 
 ### <a name="output_storage_account_primary_web_endpoint"></a> [storage\_account\_primary\_web\_endpoint](#output\_storage\_account\_primary\_web\_endpoint)
 
 Description: The primary web endpoint.
 
+### <a name="output_storage_account_primary_web_host"></a> [storage\_account\_primary\_web\_host](#output\_storage\_account\_primary\_web\_host)
+
+Description: The primary web host.
+
+### <a name="output_storage_account_primary_web_internet_endpoint"></a> [storage\_account\_primary\_web\_internet\_endpoint](#output\_storage\_account\_primary\_web\_internet\_endpoint)
+
+Description: The primary web internet endpoint.
+
+### <a name="output_storage_account_primary_web_internet_host"></a> [storage\_account\_primary\_web\_internet\_host](#output\_storage\_account\_primary\_web\_internet\_host)
+
+Description: The primary web internet host.
+
+### <a name="output_storage_account_primary_web_microsoft_endpoint"></a> [storage\_account\_primary\_web\_microsoft\_endpoint](#output\_storage\_account\_primary\_web\_microsoft\_endpoint)
+
+Description: The primary web Microsoft endpoint.
+
+### <a name="output_storage_account_primary_web_microsoft_host"></a> [storage\_account\_primary\_web\_microsoft\_host](#output\_storage\_account\_primary\_web\_microsoft\_host)
+
+Description: The primary web Microsoft host.
+
+### <a name="output_storage_account_secondary_access_key"></a> [storage\_account\_secondary\_access\_key](#output\_storage\_account\_secondary\_access\_key)
+
+Description: The storage account secondary access key.
+
+### <a name="output_storage_account_secondary_blob_connection_string"></a> [storage\_account\_secondary\_blob\_connection\_string](#output\_storage\_account\_secondary\_blob\_connection\_string)
+
+Description: The storage account secondary blob connection string.
+
+### <a name="output_storage_account_secondary_blob_endpoint"></a> [storage\_account\_secondary\_blob\_endpoint](#output\_storage\_account\_secondary\_blob\_endpoint)
+
+Description: The secondary blob endpoint.
+
+### <a name="output_storage_account_secondary_blob_host"></a> [storage\_account\_secondary\_blob\_host](#output\_storage\_account\_secondary\_blob\_host)
+
+Description: The secondary blob host.
+
+### <a name="output_storage_account_secondary_blob_internet_endpoint"></a> [storage\_account\_secondary\_blob\_internet\_endpoint](#output\_storage\_account\_secondary\_blob\_internet\_endpoint)
+
+Description: The secondary blob internet endpoint.
+
+### <a name="output_storage_account_secondary_blob_internet_host"></a> [storage\_account\_secondary\_blob\_internet\_host](#output\_storage\_account\_secondary\_blob\_internet\_host)
+
+Description: The secondary blob internet host.
+
+### <a name="output_storage_account_secondary_blob_microsoft_endpoint"></a> [storage\_account\_secondary\_blob\_microsoft\_endpoint](#output\_storage\_account\_secondary\_blob\_microsoft\_endpoint)
+
+Description: The secondary blob Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_blob_microsoft_host"></a> [storage\_account\_secondary\_blob\_microsoft\_host](#output\_storage\_account\_secondary\_blob\_microsoft\_host)
+
+Description: The secondary blob Microsoft host.
+
+### <a name="output_storage_account_secondary_connection_string"></a> [storage\_account\_secondary\_connection\_string](#output\_storage\_account\_secondary\_connection\_string)
+
+Description: The storage account secondary connection string.
+
+### <a name="output_storage_account_secondary_dfs_endpoint"></a> [storage\_account\_secondary\_dfs\_endpoint](#output\_storage\_account\_secondary\_dfs\_endpoint)
+
+Description: The secondary DFS endpoint.
+
+### <a name="output_storage_account_secondary_dfs_host"></a> [storage\_account\_secondary\_dfs\_host](#output\_storage\_account\_secondary\_dfs\_host)
+
+Description: The secondary DFS host.
+
+### <a name="output_storage_account_secondary_dfs_internet_endpoint"></a> [storage\_account\_secondary\_dfs\_internet\_endpoint](#output\_storage\_account\_secondary\_dfs\_internet\_endpoint)
+
+Description: The secondary DFS internet endpoint.
+
+### <a name="output_storage_account_secondary_dfs_internet_host"></a> [storage\_account\_secondary\_dfs\_internet\_host](#output\_storage\_account\_secondary\_dfs\_internet\_host)
+
+Description: The secondary DFS internet host.
+
+### <a name="output_storage_account_secondary_dfs_microsoft_endpoint"></a> [storage\_account\_secondary\_dfs\_microsoft\_endpoint](#output\_storage\_account\_secondary\_dfs\_microsoft\_endpoint)
+
+Description: The secondary DFS Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_dfs_microsoft_host"></a> [storage\_account\_secondary\_dfs\_microsoft\_host](#output\_storage\_account\_secondary\_dfs\_microsoft\_host)
+
+Description: The secondary DFS Microsoft host.
+
+### <a name="output_storage_account_secondary_file_endpoint"></a> [storage\_account\_secondary\_file\_endpoint](#output\_storage\_account\_secondary\_file\_endpoint)
+
+Description: The secondary file endpoint.
+
+### <a name="output_storage_account_secondary_file_host"></a> [storage\_account\_secondary\_file\_host](#output\_storage\_account\_secondary\_file\_host)
+
+Description: The secondary file host.
+
+### <a name="output_storage_account_secondary_file_internet_endpoint"></a> [storage\_account\_secondary\_file\_internet\_endpoint](#output\_storage\_account\_secondary\_file\_internet\_endpoint)
+
+Description: The secondary file internet endpoint.
+
+### <a name="output_storage_account_secondary_file_internet_host"></a> [storage\_account\_secondary\_file\_internet\_host](#output\_storage\_account\_secondary\_file\_internet\_host)
+
+Description: The secondary file internet host.
+
+### <a name="output_storage_account_secondary_file_microsoft_endpoint"></a> [storage\_account\_secondary\_file\_microsoft\_endpoint](#output\_storage\_account\_secondary\_file\_microsoft\_endpoint)
+
+Description: The secondary file Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_file_microsoft_host"></a> [storage\_account\_secondary\_file\_microsoft\_host](#output\_storage\_account\_secondary\_file\_microsoft\_host)
+
+Description: The secondary file Microsoft host.
+
+### <a name="output_storage_account_secondary_location"></a> [storage\_account\_secondary\_location](#output\_storage\_account\_secondary\_location)
+
+Description: The storage account secondary location.
+
+### <a name="output_storage_account_secondary_queue_endpoint"></a> [storage\_account\_secondary\_queue\_endpoint](#output\_storage\_account\_secondary\_queue\_endpoint)
+
+Description: The secondary queue endpoint.
+
+### <a name="output_storage_account_secondary_queue_host"></a> [storage\_account\_secondary\_queue\_host](#output\_storage\_account\_secondary\_queue\_host)
+
+Description: The secondary queue host.
+
+### <a name="output_storage_account_secondary_queue_microsoft_endpoint"></a> [storage\_account\_secondary\_queue\_microsoft\_endpoint](#output\_storage\_account\_secondary\_queue\_microsoft\_endpoint)
+
+Description: The secondary queue Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_queue_microsoft_host"></a> [storage\_account\_secondary\_queue\_microsoft\_host](#output\_storage\_account\_secondary\_queue\_microsoft\_host)
+
+Description: The secondary queue Microsoft host.
+
+### <a name="output_storage_account_secondary_table_endpoint"></a> [storage\_account\_secondary\_table\_endpoint](#output\_storage\_account\_secondary\_table\_endpoint)
+
+Description: The secondary table endpoint.
+
+### <a name="output_storage_account_secondary_table_host"></a> [storage\_account\_secondary\_table\_host](#output\_storage\_account\_secondary\_table\_host)
+
+Description: The secondary table host.
+
+### <a name="output_storage_account_secondary_table_microsoft_endpoint"></a> [storage\_account\_secondary\_table\_microsoft\_endpoint](#output\_storage\_account\_secondary\_table\_microsoft\_endpoint)
+
+Description: The secondary table Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_table_microsoft_host"></a> [storage\_account\_secondary\_table\_microsoft\_host](#output\_storage\_account\_secondary\_table\_microsoft\_host)
+
+Description: The secondary table Microsoft host.
+
+### <a name="output_storage_account_secondary_web_endpoint"></a> [storage\_account\_secondary\_web\_endpoint](#output\_storage\_account\_secondary\_web\_endpoint)
+
+Description: The secondary web endpoint.
+
+### <a name="output_storage_account_secondary_web_host"></a> [storage\_account\_secondary\_web\_host](#output\_storage\_account\_secondary\_web\_host)
+
+Description: The secondary web host.
+
+### <a name="output_storage_account_secondary_web_internet_endpoint"></a> [storage\_account\_secondary\_web\_internet\_endpoint](#output\_storage\_account\_secondary\_web\_internet\_endpoint)
+
+Description: The secondary web internet endpoint.
+
+### <a name="output_storage_account_secondary_web_internet_host"></a> [storage\_account\_secondary\_web\_internet\_host](#output\_storage\_account\_secondary\_web\_internet\_host)
+
+Description: The secondary web internet host.
+
+### <a name="output_storage_account_secondary_web_microsoft_endpoint"></a> [storage\_account\_secondary\_web\_microsoft\_endpoint](#output\_storage\_account\_secondary\_web\_microsoft\_endpoint)
+
+Description: The secondary web Microsoft endpoint.
+
+### <a name="output_storage_account_secondary_web_microsoft_host"></a> [storage\_account\_secondary\_web\_microsoft\_host](#output\_storage\_account\_secondary\_web\_microsoft\_host)
+
+Description: The secondary web Microsoft host.
+
+### <a name="output_storage_blob"></a> [storage\_blob](#output\_storage\_blob)
+
+Description: Map of storage blob resources keyed by <container>/<name>.
+
 ### <a name="output_storage_blob_ids"></a> [storage\_blob\_ids](#output\_storage\_blob\_ids)
 
 Description: Map of storage blob IDs keyed by <container>/<name>.
+
+### <a name="output_storage_blob_urls"></a> [storage\_blob\_urls](#output\_storage\_blob\_urls)
+
+Description: Map of storage blob URLs keyed by <container>/<name>.
+
+### <a name="output_storage_container"></a> [storage\_container](#output\_storage\_container)
+
+Description: Map of storage container resources keyed by container name.
+
+### <a name="output_storage_container_has_immutability_policy"></a> [storage\_container\_has\_immutability\_policy](#output\_storage\_container\_has\_immutability\_policy)
+
+Description: Map of container immutability policy flags keyed by container name.
+
+### <a name="output_storage_container_has_legal_hold"></a> [storage\_container\_has\_legal\_hold](#output\_storage\_container\_has\_legal\_hold)
+
+Description: Map of container legal hold flags keyed by container name.
 
 ### <a name="output_storage_container_ids"></a> [storage\_container\_ids](#output\_storage\_container\_ids)
 
 Description: Map of storage container IDs keyed by container name.
 
+### <a name="output_storage_container_resource_manager_ids"></a> [storage\_container\_resource\_manager\_ids](#output\_storage\_container\_resource\_manager\_ids)
+
+Description: Map of storage container resource manager IDs keyed by container name.
+
+### <a name="output_storage_encryption_scope"></a> [storage\_encryption\_scope](#output\_storage\_encryption\_scope)
+
+Description: Map of storage encryption scope resources keyed by scope name.
+
 ### <a name="output_storage_encryption_scope_ids"></a> [storage\_encryption\_scope\_ids](#output\_storage\_encryption\_scope\_ids)
 
 Description: Map of storage encryption scope IDs keyed by scope name.
+
+### <a name="output_storage_management_policy"></a> [storage\_management\_policy](#output\_storage\_management\_policy)
+
+Description: The storage management policy resource if created.
 
 ### <a name="output_storage_management_policy_id"></a> [storage\_management\_policy\_id](#output\_storage\_management\_policy\_id)
 
 Description: The storage management policy ID if created.
 
+### <a name="output_storage_queue"></a> [storage\_queue](#output\_storage\_queue)
+
+Description: Map of storage queue resources keyed by queue name.
+
 ### <a name="output_storage_queue_ids"></a> [storage\_queue\_ids](#output\_storage\_queue\_ids)
 
 Description: Map of storage queue IDs keyed by queue name.
 
+### <a name="output_storage_queue_resource_manager_ids"></a> [storage\_queue\_resource\_manager\_ids](#output\_storage\_queue\_resource\_manager\_ids)
+
+Description: Map of storage queue resource manager IDs keyed by queue name.
+
+### <a name="output_storage_queue_urls"></a> [storage\_queue\_urls](#output\_storage\_queue\_urls)
+
+Description: Map of storage queue URLs keyed by queue name.
+
+### <a name="output_storage_table"></a> [storage\_table](#output\_storage\_table)
+
+Description: Map of storage table resources keyed by table name.
+
 ### <a name="output_storage_table_ids"></a> [storage\_table\_ids](#output\_storage\_table\_ids)
 
 Description: Map of storage table IDs keyed by table name.
+
+### <a name="output_storage_table_resource_manager_ids"></a> [storage\_table\_resource\_manager\_ids](#output\_storage\_table\_resource\_manager\_ids)
+
+Description: Map of storage table resource manager IDs keyed by table name.
 
 <!-- markdownlint-enable -->
 <!-- END_TF_DOCS -->
