@@ -110,21 +110,21 @@ run "invalid_nfsv3_enabled_combo" {
   ]
 }
 
-run "invalid_customer_managed_key_ids" {
+run "invalid_storage_account_customer_managed_key_ids" {
   command = plan
 
   variables {
     name                = "st${substr(replace(uuid(), "-", ""), 0, 10)}"
     location            = "eastus"
     resource_group_name = "rg-${substr(replace(uuid(), "-", ""), 0, 10)}"
-    customer_managed_key = {
+    storage_account_customer_managed_key = {
       key_vault_id              = "bad"
       user_assigned_identity_id = "bad"
     }
   }
 
   expect_failures = [
-    var.customer_managed_key,
+    var.storage_account_customer_managed_key,
   ]
 }
 
