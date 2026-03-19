@@ -178,29 +178,6 @@ variable "custom_domain" {
   }
 }
 
-variable "customer_managed_key" {
-  description = <<EOF
-  (Optional) A `customer_managed_key` block as documented below.
-    key_vault_id :  (Optional) The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
-    user_assigned_identity_id : (Required) The ID of a user assigned identity.
-  EOF
-  type = object({
-    key_vault_id              = optional(string)
-    user_assigned_identity_id = optional(string)
-  })
-  default = null
-
-  validation {
-    condition = var.customer_managed_key == null ? true : (
-      var.customer_managed_key.key_vault_id != null &&
-      var.customer_managed_key.user_assigned_identity_id != null &&
-      can(regex("^/subscriptions/[^/]+/resourceGroups/[^/]+/providers/Microsoft\\.KeyVault/vaults/[^/]+/keys/[^/]+(/[^/]+)?$", var.customer_managed_key.key_vault_id)) &&
-      can(regex("^/subscriptions/[^/]+/resourceGroups/[^/]+/providers/Microsoft\\.ManagedIdentity/userAssignedIdentities/[^/]+$", var.customer_managed_key.user_assigned_identity_id))
-    )
-    error_message = "customer_managed_key requires key_vault_id and user_assigned_identity_id, and both must be valid Azure resource IDs."
-  }
-}
-
 variable "identity" {
   description = <<EOF
   (Optional) A `identity` block as documented below.
