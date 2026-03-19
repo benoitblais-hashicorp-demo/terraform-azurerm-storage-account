@@ -208,23 +208,6 @@ object({
 
 Default: `null`
 
-### <a name="input_customer_managed_key"></a> [customer\_managed\_key](#input\_customer\_managed\_key)
-
-Description:   (Optional) A `customer_managed_key` block as documented below.  
-    key\_vault\_id :  (Optional) The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.  
-    user\_assigned\_identity\_id : (Required) The ID of a user assigned identity.
-
-Type:
-
-```hcl
-object({
-    key_vault_id              = optional(string)
-    user_assigned_identity_id = optional(string)
-  })
-```
-
-Default: `null`
-
 ### <a name="input_default_to_oauth_authentication"></a> [default\_to\_oauth\_authentication](#input\_default\_to\_oauth\_authentication)
 
 Description: (Optional) Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. Defaults to `false`.
