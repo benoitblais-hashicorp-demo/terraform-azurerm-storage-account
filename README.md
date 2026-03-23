@@ -1423,7 +1423,7 @@ Description: Map of storage table IDs keyed by table name.
 Description: Map of storage table resource manager IDs keyed by table name.
 
 <!-- markdownlint-enable -->
-## External documentation
+# External documentation
 
 - [azurerm\_storage\_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
 - [azurerm\_storage\_account\_customer\_managed\_key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account\_customer\_managed\_key)
