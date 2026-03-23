@@ -1,5 +1,5 @@
-run "apply_basic" {
-  command = apply
+run "plan_basic" {
+  command = plan
 
   module {
     source = "./tests/fixtures/basic"

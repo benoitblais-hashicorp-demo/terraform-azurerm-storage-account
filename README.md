@@ -7,20 +7,68 @@ Terraform module to provision an Azure Storage Account with optional networking,
 
 To provision the Azure resources managed by this module, the identity running Terraform needs permissions such as:
 
-- Storage account management (create/update/delete).
-- Storage containers, blobs, queues, and tables management.
-- Storage account network rules and private endpoint management.
-- Key Vault key access for customer-managed keys (if used).
-- Resource group read and write access where resources are created.
+- `Contributor` (for resource group and Storage Account/Private Endpoint resource lifecycle operations).
+- `Storage Blob Data Contributor` (required for blob container/blob data-plane operations managed by this module).
+- `Storage Queue Data Contributor` (required for queue data-plane operations managed by this module).
+- `Storage Table Data Contributor` (required for table data-plane operations managed by this module).
+- `Network Contributor` (required on the target virtual network/subnet used by private endpoints).
+- `Key Vault Crypto Service Encryption User` (required when using customer-managed keys in Key Vault for storage account encryption).
+- `Private DNS Zone Contributor` (required when configuring `private_dns_zone_group` with private endpoint integration).
 
 ## Authentications
 
-Authenticate to Azure using one of the supported AzureRM provider methods:
+Authentication to Azure can be configured using one of the following methods:
 
-- Azure CLI (`az login`) for local development.
-- Service principal with client secret or certificate.
-- Managed identity when running in Azure.
-- Environment variables (`ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_SUBSCRIPTION_ID`).
+### Service Principal and Client Secret
+
+Use an Azure AD service principal for non-interactive runs (CI/CD, automation).
+
+You can configure this method in either of the following ways:
+
+- **Inside the provider block**
+
+  ```hcl
+  provider "azurerm" {
+    features {}
+
+    subscription_id = "<subscription-id>"
+    tenant_id       = "<tenant-id>"
+    client_id       = "<client-id>"
+    client_secret   = "<client-secret>"
+  }
+  ```
+
+- **Using environment variables**
+
+  - `ARM_SUBSCRIPTION_ID`
+  - `ARM_TENANT_ID`
+  - `ARM_CLIENT_ID`
+  - `ARM_CLIENT_SECRET`
+
+### Managed Service Identity
+
+Use Managed Identity when Terraform runs on Azure-hosted compute (for example, Azure VM, VMSS, App Service, AKS).
+
+- **Inside the provider block**
+
+  ```hcl
+  provider "azurerm" {
+    features {}
+    use_msi = true
+  }
+  ```
+
+- **Using environment variables**
+
+  - `ARM_USE_MSI=true`
+  - `ARM_SUBSCRIPTION_ID`
+  - `ARM_TENANT_ID` (optional in some environments, but recommended for clarity)
+
+Documentation:
+
+- [Authenticating to Azure](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure)
+- [Service Principal and Client Secret](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret)
+- [Managed Service Identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/managed_service_identity)
 
 ## Features
 
@@ -1375,4 +1423,17 @@ Description: Map of storage table IDs keyed by table name.
 Description: Map of storage table resource manager IDs keyed by table name.
 
 <!-- markdownlint-enable -->
+# External documentation
+
+- [azurerm\_storage\_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
+- [azurerm\_storage\_account\_customer\_managed\_key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account\_customer\_managed\_key)
+- [azurerm\_storage\_account\_local\_user](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account\_local\_user)
+- [azurerm\_storage\_account\_network\_rules](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account\_network\_rules)
+- [azurerm\_storage\_blob](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob)
+- [azurerm\_storage\_container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container)
+- [azurerm\_storage\_encryption\_scope](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_encryption_scope)
+- [azurerm\_storage\_management\_policy](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_management_policy)
+- [azurerm\_storage\_queue](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_queue)
+- [azurerm\_storage\_table](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_table)
+- [azurerm\_private\_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint)
 <!-- END_TF_DOCS -->
