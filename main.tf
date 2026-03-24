@@ -267,6 +267,9 @@ resource "azurerm_storage_blob" "this" {
   source_uri             = try(each.value.source_uri, null)
   parallelism            = try(each.value.parallelism, null)
   metadata               = try(each.value.metadata, null)
+
+  depends_on = [azurerm_storage_container.this]
+
 }
 
 resource "azurerm_storage_container" "this" {
